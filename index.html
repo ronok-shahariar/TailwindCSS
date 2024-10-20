@@ -44,7 +44,7 @@
                 height="60px"/>
              </a>
 
-             <ul class="flex gap-6">
+             <ul class=" hidden lg:flex gap-6">
                 <li class="text-gray-700 font-mullish text-[20px] py-7 hover:text-lightBlue cursor-pointer
                     transition-all duration-200 relative group ">
                     <a href="#">Payments</a>
@@ -98,24 +98,37 @@
 
         <!-- Flag and 2 buttons -->
         <div class="relative right-10 flex items-center space-x-2">
-            <img class="w-8 h-10" src="./images/icons8-bangladesh-48.png" />
+            <img class="w-8 h-10 hidden lg:flex" src="./images/icons8-bangladesh-48.png" 
+            />
 
             <button class="py-3 px-5  font-mullish  text-blue-800 border-lightBlue500 border-2
             rounded-[15px] text-[15px] hover:font-bold">Log in</button>
 
-            <button class="flex items-center py-3 px-7 font-mullish rounded-full
+            <!-- Hamburger Menu -->
+            <div class=" cursor-pointer lg:hidden ">
+                <div class="flex flex-col gap-y-2">
+                <div class="w-8 h-1 bg-black"></div>
+                <div class="w-8 h-1 bg-black"></div>
+                <div class="w-8 h-1 bg-black"></div>
+                </div>
+                
+            </div>
+
+            <button class="hidden lg:flex items-center py-3 px-7 font-mullish rounded-full
             bg-blue-600 text-white transition-all duration-200 text-[15px]
             hover:text-lightBlue500 hover:bg-white  hover:border-lightBlue500 hover: border-2 hover:font-bold">
             <span>Sign Up</span>
             <img src="./images/right-arrow.png" alt="Arrow" class="ml-2 w-7 h-5">        
             </button>
-        </div>           
+        </div> 
+        
+          
     </nav>
 
     <!-- Hero Section -->
      <section class="relative bg-deepBlue w-11/12 max-w-[1495px] items-center mx-auto">
 
-        <div class="w-10/12 max-w-[1080px] flex flex-row justify-between items-center mx-auto ">
+        <div class="w-10/12 max-w-[1080px] flex flex-col pt-7 lg:flex-row justify-between items-center mx-auto ">
 
             <!-- left part -->
 
@@ -219,13 +232,14 @@
                      </div>
                  </div>
 
+                 <!-- right section -->
                  <img src="./images/payment-suite.png" alt="" 
-                 class="absolute max-w-[600px] right-10 bottom-0 top-14">
+                 class="absolute right-10 bottom-0 top-14 hidden md:max-w-[300px] lg:max-w-[600px] md:block lg:block">
               </div>
 
-                      <!-- Card Box -->
+    <!-- Card Box -->
 
-        <div class="w-full grid grid-cols-3 gap-4 mt-10">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 ">
             <!-- Box1 -->
              <div class="w-full min-h-[15rem] relative cursor-pointer
              transition-transform duration-200 hover:scale-105 hover:shadow-lg">
@@ -548,21 +562,22 @@
                 Explore Razorpay Business Banking</h2>
             <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
 
+            <!-- 2 POWER images -->
 
-            <!-- main feature box -->
-             <div class="w-full min-h-[440px] flex relative">
                 <img src="./images/x-flame-1.png" alt=""
                 loading="lazy"
-                class="absolute -top-[142px] -left-[140px] w-[200px]">
+                class="absolute -top-[82px] -left-[140px] w-[200px]">
 
                 <img src="./images/x-flame-2.png" alt=""
                 loading="lazy"
-                class="absolute top-[250px] -right-[140px] w-[270px] rotate-90">
+                class="absolute top-[340px] -right-[140px] w-[270px] rotate-90">
 
-                <!-- content box -->
-                <div class=" w-full min-h-[220px] flex rounded-md relative p-16 py-10 border bg-grayBlue">
+
+            <!-- main feature box -->
+             <div class="w-full min-h-[440px] flex flex-col justify-between lg:flex-row rounded-md relative p-16 py-10 border bg-grayBlue">
+                               
                     <!-- left section -->
-                     <div class="flex flex-col justify-between w-full">
+                     <div class="flex flex-col justify-between ">
                         <h3 class="text-white font-mullish text-[28px] leading-10 font-bold max-w-[500px]">
                             Manage your company's finances with
                             <img src="./images/razorpayX.svg" alt=""
@@ -617,15 +632,16 @@
                              </div>
                          </div>
                      </div>
-    
-                     <img src="./images/buisness-banking.png" alt="" 
-                     class="absolute max-w-[500px] right-16 bottom-0 top-7">
-                </div>
-
+                     
+                     <!-- right section -->
+                     <div class="hidden lg:block">
+                        <img src="./images/buisness-banking.png" alt="" 
+                         class="absolute max-w-[500px] right-16 top-7 lg:w-[50%]">
+                     </div>
              </div>
 
             <!-- card box -->
-            <div class="w-full grid grid-cols-3 gap-4 mt-10 pb-10 pt-4">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10 pb-10 pt-4">
                 <!-- Box1 -->
                 <div class="w-full min-h-[15rem] relative cursor-pointer 
                 transition-transform duration-200 hover:scale-105 hover:shadow-lg hover:shadow-purple-800">
